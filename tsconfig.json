@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "target": "es6",
+        "module": "commonjs",
+        "resolveJsonModule": true,
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+    ]
+}

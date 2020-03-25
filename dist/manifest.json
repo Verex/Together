@@ -1,0 +1,30 @@
+{
+	"name": "Together",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"description": "Sync video from popular streaming services.",
+	"homepage_url": "https://duo.com/labs",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"browser_action": {
+		"default_title": "Together",
+		"default_popup": "popup.html"
+	},
+	"default_locale": "en",
+	"background": {
+		"scripts": [ "js/background.js" ],
+		"persistent": true
+	},
+	"permissions": [ "storage" ],
+	"content_security_policy": "style-src 'unsafe-inline' 'self'; default-src 'self'; connect-src ws://tetron.online:*/ http://tetron.online:*/;",
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": [ "https://*.disneyplus.com/*", "https://*.netflix.com/*" ],
+			"js": [ "js/content.js" ]
+		}
+	]
+}

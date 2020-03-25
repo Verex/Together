@@ -1,0 +1,5 @@
+.DS_Store
+dist/js/*
+server-dist/
+node_modules/
+certs/
